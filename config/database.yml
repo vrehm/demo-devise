@@ -80,6 +80,9 @@ test:
 #
 production:
   <<: *default
-  database: demo_devise_production
-  username: demo_devise
-  password: <%= ENV['DEMO_DEVISE_DATABASE_PASSWORD'] %>
+  # database: demo_devise_production
+  # username: demo_devise
+  # password: <%= ENV['DEMO_DEVISE_DATABASE_PASSWORD'] %>
+  rails_master_key: <%= ENV['RAILS_MASTER_KEY'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
